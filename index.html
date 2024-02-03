@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Tailwind</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script src="https://kit.fontawesome.com/299ab48c49.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body class="dark:bg-slate-800 font-">
+    <div class="max-w-[1000px] mx-auto h-[100vh] flex flex-col gap-2 p-2">
+
+      <div class="dark:bg-slate-500 p-4 bg-slate-200 flex justify-between relative">
+        <!-- for bigger screens -->
+        <div class="py-2 px-2 sm:flex justify-start gap-4 hidden">
+            <a href="#" class="font-bold hover:underline text-xl">Home</a>
+            <a href="#" class="font-bold hover:underline text-xl">Projects</a>
+            <a href="#" class="font-bold hover:underline text-xl">About</a>
+        </div>
+        <!-- for small screens -->
+         <!-- Menu Icon-->
+        <button id="btnMenu" class="py-2 px-2 block sm:hidden"><i class="fa-solid fa-bars fa-xl"></i></button>
+        <!-- menu container-->
+        <div id="popupMenu" class="justify-start gap-4 hidden sm:hidden absolute bg-slate-300 left-0 right-0 top-[70px] p-4 pb-8">
+          <!-- menu items -->
+          <a href="#" class="font-bold hover:underline text-xl block">Home</a>
+          <a href="#" class="font-bold hover:underline text-xl block">Projects</a>
+          <a href="#" class="font-bold hover:underline text-xl block">About</a>
+      </div>
+        <button id="btnTheme" class="border border-slate-700 rounded py-2 px-2">dark</i></button>
+      </div>
+      <div id="content" class="p-4 grow border border-slate-600">
+        
+        <h1 class="text-4xl font-bold">Home</h1>
+        <p class="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus maximus arcu nec diam convallis, non rhoncus lectus tempor. Vivamus nunc massa, 
+          dignissim at nunc eget, pulvinar eleifend est. Etiam mattis sapien a porttitor volutpat. Mauris eu consequat leo. Quisque diam libero, auctor sit amet porttitor 
+          blandit, faucibus sed lacus. Donec laoreet ut nibh sed vestibulum. Sed aliquam varius hendrerit. Pellentesque quis odio felis. Morbi bibendum pellentesque nisl at 
+          ornare. Vivamus at tincidunt arcu. Aenean et arcu in mauris tempus elementum sit amet sit amet elit.
+
+          Donec finibus nec urna nec faucibus. Vivamus non sapien nec est condimentum posuere. Quisque pharetra lobortis arcu ut gravida. Vestibulum sapien velit, aliquet eget 
+          elementum nec, interdum non turpis. Duis non nisl ante. Donec venenatis porta diam eget feugiat. Aenean vitae pulvinar sapien, id fringilla felis. Curabitur massa justo, 
+          maximus a est et, dapibus tincidunt ex. Nunc accumsan est fermentum dictum sagittis. Nulla nunc purus, vestibulum in sem eu, luctus dictum libero. Suspendisse fermentum tellus 
+          ut aliquam eleifend. Quisque eget pellentesque leo.</p>
+      </div>
+      <div class="p-4 text-center bg-slate-200">footer</div>
+    </div>
+    
+    <script type="module" src="/main.js"></script>
+    <script>
+      // custom config for the MTW app 
+      const mtwAppConfig = {
+          border: true // app border in the MTW page                    
+      }
+
+      ///////////////////////////////////////////////////////
+      // implement this functions in order to use private API        
+      const sendPrivateApiRequest = async () => {
+          // your code here:
+          // sendRequestToParent({ cat: 'getAssets' })
+      }        
+
+      const acceptPrivateApiResponse = async (data) => {
+          // process received data here:
+          // console.log(data)
+      }
+
+      // use this in order to send on document load
+      document.addEventListener('DOMContentLoaded', () => {
+          // your code here:
+          //sendRequestToParent({ method: 'getAssets' })
+      })
+
+  </script>
+  <script src="https://morethanwallet.com/appstore/index.js"></script>
+
+  </body>
+</html>
